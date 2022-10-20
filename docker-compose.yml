@@ -1,0 +1,15 @@
+  version: '3'
+
+  services:
+    api:
+      image: ejemploreal-api
+      build:
+        context: .
+        dockerfile: EjemploReal.Api/Dockerfile
+    web:
+      image: ejemploreal-web
+      build:
+        context: .
+        dockerfile: EjemploReal.Web/Dockerfile
+    sql-data:
+      image: mcr.microsoft.com/mssql/server:2017-latest

@@ -1,0 +1,18 @@
+  version: '3'
+
+  services:
+    api:
+      environment:
+        - ConnectionStrings__DefaultConnection=Server=sql-data;Database=EjemploReal;User Id=sa;Password=Passw0rd!
+    web:
+      environment:
+        - apiurl=http://api
+      ports:
+        - "80"
+    sql-data:
+      environment:
+        - SA_PASSWORD=Passw0rd!
+        - ACCEPT_EULA=Y
+        - MSSQL_PID=Developer
+      ports:
+        - "6433:1433"
