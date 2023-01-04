@@ -11,7 +11,7 @@
         - "80"
     sql-data:
       environment:
-        - SA_PASSWORD=Passw0rd!
+        - SA_PASSWORD=$PASSWORD
         - ACCEPT_EULA=Y
         - MSSQL_PID=Developer
       ports:
